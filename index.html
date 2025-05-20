@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>(H)Gleb Rusalouski</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="description">
+      © (H)Gleb Rusalouski <br>
+      Art Direction, Graphic Design, Curation
+    </div>
+    <div class="buttons-cont">
+      <a href="" id="btn-about">About</a>
+      <a href="" id="btn-contact">Contact</a>
+    </div>
+
+    <div class="contact-cont-opened">
+      <a href="mailto:psglebbb@gmail.com">Mail</a>
+      <a href="tel:+436765917270">Tel.</a>
+      <a href="https://www.instagram.com/psgleb/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    
+
+    <div class="about-cont-opened">
+      <div class="text">Clients: <br><br>
+      Artists, Authors, Architects, Businesses, Communities, Events, Galleries, Institutions, Museums, Musicians, Photographers, Start-ups, Unions...
+      </div>
+
+      <div class="text">Nuances:<br><br>
+        © 2025 Hleb Rusalouski<br>
+        ATU81182248<br>
+        Based in Austria, Linz <br>       
+      </div>
+
+      <img src="image-1.png" alt="psgleb" >
+  </div>
+
+</div>
+    <div class="h">
+      <a href="">(H)</a>
+    </div>
+   
+
+    <script>
+      const aboutBtn   = document.getElementById('btn-about');
+      const contactBtn = document.getElementById('btn-contact');
+      const aboutBox   = document.querySelector('.about-cont-opened');
+      const contactBox = document.querySelector('.contact-cont-opened');
+    
+      function closeAll() {
+        aboutBox.classList.remove('open');
+        contactBox.classList.remove('open');
+        aboutBtn.classList.remove('active', 'inactive');
+        contactBtn.classList.remove('active', 'inactive');
+      }
+    
+      aboutBtn.addEventListener('click', e => {
+        e.preventDefault();
+        const willOpen = !aboutBox.classList.contains('open');
+        closeAll();
+        if (willOpen) {
+          aboutBox.classList.add('open');
+          aboutBtn.classList.add('active');
+          contactBtn.classList.add('inactive');
+        }
+      });
+    
+      contactBtn.addEventListener('click', e => {
+        e.preventDefault();
+        const willOpen = !contactBox.classList.contains('open');
+        closeAll();
+        if (willOpen) {
+          contactBox.classList.add('open');
+          contactBtn.classList.add('active');
+          aboutBtn.classList.add('inactive');
+        }
+      });
+    
+      // NEW: change background to a random color on any click
+      document.addEventListener('click', e => {
+        // generate a 6-digit hex code
+        const randomColor = '#' + Math.floor(Math.random() * 0xFFFFFF)
+                                       .toString(16)
+                                       .padStart(6, '0');
+        document.body.style.backgroundColor = randomColor;
+      });
+    </script>
+    
+
+</body>
+</html>

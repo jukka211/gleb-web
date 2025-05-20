@@ -1,0 +1,123 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100vw; height: 100vh; overflow:hidden; }
+/* for most browsers */
+::selection {
+    background-color: black;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* for Firefox */
+  ::-moz-selection {
+    background-color: black;
+    color: rgb(0, 0, 0);
+  }
+  
+
+@font-face {
+    font-family: "Arial Nova";
+    src: url("ArialNova-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+  body {
+    font-family: "Arial Nova", sans-serif;
+    text-decoration: none;
+    padding: 2px;
+    height: 100vh;
+  }
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 17px;
+    line-height: 110%;
+    letter-spacing: -0.3px;
+  }
+  a .buttons-cont{
+    text-decoration: none;
+    color:black;
+  }
+  a {
+    text-decoration: none;
+    color:black;
+  }
+.buttons-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 56px;
+    margin-bottom: 16px;
+
+}
+.buttons-cont a {
+    color: black;
+    text-decoration: none;
+    padding: 0;
+  }
+  
+  /* Greyed out when “inactive” */
+  .buttons-cont a.inactive {
+    color: rgb(159, 159, 159);
+  }
+  
+  /* (Optional) Highlight active if you like */
+  .buttons-cont a.active {
+    font-weight: bold;
+  }
+  
+  /* Panels hidden by default */
+  .about-cont-opened,
+  .contact-cont-opened {
+    display: none;
+  }
+  
+  /* Your open-state styles */
+  .about-cont-opened.open {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    height: 100%;
+    width: 20%;
+  }
+  
+  .contact-cont-opened.open {
+    display: flex;
+    flex-direction: row;
+    gap: 56px;
+  }
+  
+
+img {
+    padding-top: 10px;
+width:10vw;
+}
+
+
+.h {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .about-cont-opened.open {
+        display: flex;
+        flex-direction: column;
+        gap: 6%;
+        height: 100%;
+        width: 100%;
+      }
+
+
+img {
+
+width:50vw;
+}
+
+}
