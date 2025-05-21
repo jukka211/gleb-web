@@ -1,5 +1,5 @@
 * { margin:0; padding:0; box-sizing:border-box; }
-html, body { width:100vw; height: 100vh; overflow:hidden; }
+html, body { width:100vw; height: 100vh; overflow-x:hidden; }
 /* for most browsers */
 ::selection {
     background-color: black;
